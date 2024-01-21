@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  react-app:
+    build:
+      context: ./lottery-front
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+  express-app:
+    build:
+      context: ./lottery-back
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"

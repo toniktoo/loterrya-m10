@@ -1,0 +1,27 @@
+.Alert {
+	width: 300px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	border-radius: 8px;
+	border: 1px solid #000;
+	padding: 8px;
+	margin: 16px;
+}
+
+.NumberGift {
+
+}
+
+.ImageGift {
+	// background-image: url("../../assets/iphone.svg");
+	background-size: cover;
+ 	background-position: center;
+ 	background-repeat: no-repeat;
+}
+
+.Winner {
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+}

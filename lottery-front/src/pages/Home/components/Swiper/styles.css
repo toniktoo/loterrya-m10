@@ -1,0 +1,73 @@
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 340px;
+  height: 600px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.ContentSlide {
+  position: relative;
+}
+
+.M10Logo {
+  position: absolute;
+  top: 10vh;
+}
+
+.Button {
+	background-image: url("../../../../assets/qalibi_sech_button.svg");
+	background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50vw;
+  height: 12vh;
+  position: absolute;
+  bottom: -10vh;
+  background-color: transparent;
+  border: none;
+}
+
+.ButtonPlay {
+	background-image: url("../../../../assets/qalibi_sech_button.svg");
+}
+.ButtonResult {
+	background-image: url("../../../../assets/qaliblerin_siyahisi_button.svg");
+}
+
+.info-panel {
+  position: absolute;
+  top: 0; /* Скрыто изначально */
+  left: 27%; /* Скрыто изначально */
+  width: 40%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: top 5s ease;
+  opacity: 0;
+  padding: 8px;
+    border-radius: 11px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+.info-panel.visible {
+  top: 60%; /* Показать при активации */
+  opacity: 1;
+}
+
+.ImageCurrentGift {
+	position: absolute;
+  right: -608px;
+  bottom: -269px;
+}
