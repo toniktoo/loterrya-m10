@@ -74,7 +74,7 @@ const getWinners = async () => {
 	return winners;
 }
 
-app.get('/init', async (req, res) => {
+app.get('/loterrya-api/init', async (req, res) => {
 	try {
 		await getInit();
 		res.json(JSON.stringify({ status: 1 }));
@@ -83,7 +83,7 @@ app.get('/init', async (req, res) => {
 	}
 });
 
-app.get('/get-winners', async (req, res) => {
+app.get('/loterrya-api/get-winners', async (req, res) => {
 	try {
 		const winners = await getWinners();
 		res.json(JSON.stringify(winners));
