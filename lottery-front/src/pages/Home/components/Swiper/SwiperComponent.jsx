@@ -138,7 +138,7 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 				}
 			</div>
 			{!loopAutoplay ? (
-				<LightSpeed right>
+				<LightSpeed right duration={2000}>
 					<img src={ConfigImageCurrentGift[typeGift]} width="800" height="800" className="ImageCurrentGift" />
 				</LightSpeed>
 			) : (

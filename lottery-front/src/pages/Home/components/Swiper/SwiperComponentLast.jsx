@@ -74,7 +74,7 @@ export function SwiperComponentLast({  }) {
 					}
 				</Swiper>
 
-				<LightSpeed>
+				<LightSpeed duration={2000}>
 					<button className="Button ButtonResult" onClick={handleButtonClickResult} />
 				</LightSpeed>
 			</div>
