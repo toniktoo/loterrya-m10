@@ -9,6 +9,7 @@ import ImageWatch from '../../assets/watch.svg';
 import ImageAirpods from '../../assets/watch.svg';
 import ImageCar from '../../assets/car.svg';
 
+const TYPE_GIFT_DEFAULT = 'default';
 const TYPE_GIFT_1 = 'money_100';
 const TYPE_GIFT_2 = 'money_500';
 const TYPE_GIFT_3 = 'samsung';
@@ -21,10 +22,10 @@ const ConfigImageCurrentGift = {
 	[TYPE_GIFT_1]: {
 		path: ImageMoney100,
 		styleImage: {
-		top: '-13.8vh',
 			left: '3.4vw',
-			width: '7vw',
-			height: '400px'
+			width: '8vw',
+			height: '5vh',
+			top: '0.7vh'
 		}
 	},
 	[TYPE_GIFT_2]: {
@@ -34,6 +35,9 @@ const ConfigImageCurrentGift = {
 			width: '8vw',
 			height: '5vh',
 			top: '0.7vh'
+		},
+		styleAlert: {
+			height: '6vh',
 		}
 	},
 	[TYPE_GIFT_3]: {
@@ -43,6 +47,10 @@ const ConfigImageCurrentGift = {
 			left: '3.4vw',
 			width: '7vw',
 			height: '400px'
+		},
+		styleAlert: {
+			height: '6.5vh',
+			width: '18vw',
 		}
 	},
 	[TYPE_GIFT_4]: ImageAirpods,
@@ -59,9 +67,9 @@ export const Alert = (props) => {
 	const countWinner = msg.split(',')[2]
 
 	return (
-		<div className={styles.Alert} key={phoneUser}>
+		<div className={styles.Alert} key={phoneUser} style={ConfigImageCurrentGift[ImagePathGift]?.styleAlert}>
 			<p className={styles.NumberGift}>{countWinner}</p>
-			<img src={ConfigImageCurrentGift[ImagePathGift].path} className={styles.ImageGift} style={ConfigImageCurrentGift[ImagePathGift].styleImage}/>
+			<img src={ConfigImageCurrentGift[ImagePathGift].path} className={styles.ImageGift} style={ConfigImageCurrentGift[ImagePathGift]?.styleImage}/>
 			<p className={styles.Winner}>{`+${phoneUser}`}</p>
 		</div>
 	)
