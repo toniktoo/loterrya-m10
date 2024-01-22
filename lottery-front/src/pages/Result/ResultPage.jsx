@@ -26,7 +26,6 @@ export const ResultPage = ({ listWinners }) => {
 	if (!listWinners) {
 		return null
 	}
-	console.log('listWinners', listWinners)
 	return (
 		<div>
 			<div className={styles.Header}>
