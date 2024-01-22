@@ -23,4 +23,4 @@ RUN npm install -g serve
 EXPOSE 3008
 
 # Запускаем приложение
-CMD ["serve", "-s", "build", "-l", "3008"]
+CMD ["node", "server.js"]
