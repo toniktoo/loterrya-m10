@@ -45,7 +45,7 @@ const ConfigImageCurrentGift = {
 	[TYPE_GIFT_3]: {
 		path: ImageSamsung,
 		styleImage: {
-			top: '-13vh',
+			top: '-13.8vh',
 			left: '3.4vw',
 			width: '7vw',
 			height: '400px'
@@ -58,7 +58,7 @@ const ConfigImageCurrentGift = {
 	[TYPE_GIFT_4]: {
 		path: ImageAirpods,
 		styleImage: {
-			top: '-13vh',
+			top: '-13.8vh',
 			left: '3.4vw',
 			width: '7vw',
 			height: '400px'
@@ -71,7 +71,7 @@ const ConfigImageCurrentGift = {
 	[TYPE_GIFT_5]: {
 		path: ImageWatch,
 		styleImage: {
-			top: '-13vh',
+			top: '-13.8vh',
 			left: '3.4vw',
 			width: '7vw',
 			height: '400px'
@@ -84,7 +84,7 @@ const ConfigImageCurrentGift = {
 	[TYPE_GIFT_6]: {
 		path: ImagePhone,
 		styleImage: {
-			top: '-13vh',
+			top: '-13.8vh',
 			left: '3.4vw',
 			width: '7vw',
 			height: '400px'
@@ -97,7 +97,7 @@ const ConfigImageCurrentGift = {
 	[TYPE_GIFT_7]: {
 		path: ImageCar,
 		styleImage: {
-			top: '-13vh',
+			top: '-13.8vh',
 			left: '3.4vw',
 			width: '7vw',
 			height: '400px'
