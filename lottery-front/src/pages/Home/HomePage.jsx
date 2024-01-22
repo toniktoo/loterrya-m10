@@ -13,7 +13,7 @@ import ImageCar from '../../assets/car.svg';
 import { Loader } from "../../components";
 import axios from "axios";
 
-export const URL_API = 'http://localhost:3009'
+export const URL_API = 'http://45.135.164.125:3009'
 
 export const TYPE_GIFT_DEFAULT = 'default';
 export const TYPE_GIFT_1 = 'money_100';
