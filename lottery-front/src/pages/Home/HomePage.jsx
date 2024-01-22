@@ -86,118 +86,118 @@ export const HomePage = () => {
 								{/** s-------------------- step start -------------------- */}
 								{
 									countWinner === 0 && (
-										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_1} phone={listWinners[TYPE_GIFT_1][countWinner]} />
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_1} phone={listWinners[TYPE_GIFT_1][countWinner]} numberWinner={1} />
 									)
 								}
 								{
 									countWinner === 1 && (
-										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_1} phone={listWinners[TYPE_GIFT_1][countWinner]} />
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_1} phone={listWinners[TYPE_GIFT_1][countWinner]} numberWinner={2} />
 									)
 								}
-								{
+								{/* {
 									countWinner === 2 && (
-										<SwiperComponent key={countWinner} ountWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_1} phone={listWinners[TYPE_GIFT_1][countWinner]} />
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_1} phone={listWinners[TYPE_GIFT_1][countWinner]} numberWinner={3} />
 									)
 								}
 								{
 									countWinner === 3 && (
-										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_1} phone={listWinners[TYPE_GIFT_1][countWinner]} />
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_1} phone={listWinners[TYPE_GIFT_1][countWinner]} numberWinner={4} />
 									)
 								}
 								{
 									countWinner === 4 && (
-										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_1} phone={listWinners[TYPE_GIFT_1][countWinner]} />
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_1} phone={listWinners[TYPE_GIFT_1][countWinner]} numberWinner={5} />
 									)
-								}
+								} */}
 								{/** ------------------- -step end -------------------- */}
 
 								{/** s-------------------- step start -------------------- */}
 								{
-									countWinner === 5 && (
-										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2][countWinner]} />
+									countWinner === 2 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2][countWinner]} numberWinner={1} />
 									)
 								}
 								{
-									countWinner === 6 && (
-										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2][countWinner]} />
+									countWinner === 3 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2][countWinner]} numberWinner={2} />
 									)
 								}
-								{
+								{/* {
 									countWinner === 7 && (
-										<SwiperComponent key={countWinner} ountWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2][countWinner]} />
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2][countWinner]} numberWinner={3} />
 									)
 								}
 								{
 									countWinner === 8 && (
-										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2][countWinner]} />
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2][countWinner]} numberWinner={4} />
 									)
 								}
 								{
 									countWinner === 9 && (
-										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2][countWinner]} />
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2][countWinner]} numberWinner={5} />
 									)
-								}
+								} */}
 								{/** ------------------- -step end -------------------- */}
 
 								{/** s-------------------- step start -------------------- */}
 								{
-									countWinner === 10 && (
-										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3][countWinner]} />
+									countWinner === 4 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3][countWinner]} numberWinner={1} />
 									)
 								}
 								{
-									countWinner === 11 && (
-										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3][countWinner]} />
+									countWinner === 5 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3][countWinner]} numberWinner={2} />
 									)
 								}
-								{
+								{/* {
 									countWinner === 12 && (
-										<SwiperComponent key={countWinner} ountWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3][countWinner]} />
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3][countWinner]} numberWinner={3} />
 									)
 								}
 								{
 									countWinner === 13 && (
-										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3][countWinner]} />
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3][countWinner]} numberWinner={4} />
 									)
 								}
 								{
 									countWinner === 14 && (
-										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3][countWinner]} />
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3][countWinner]} numberWinner={5} />
 									)
-								}
+								} */}
 								{/** ------------------- -step end -------------------- */}
 
 								{/** s-------------------- step start -------------------- */}
 								{
-									countWinner === 15 && (
-										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} />
+									countWinner === 6 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} numberWinner={1} />
 									)
 								}
 								{
-									countWinner === 16 && (
-										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} />
+									countWinner === 7 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} numberWinner={2} />
 									)
 								}
-								{
+								{/* {
 									countWinner === 17 && (
-										<SwiperComponent key={countWinner} ountWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} />
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} numberWinner={3} />
 									)
 								}
 								{
 									countWinner === 18 && (
-										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} />
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} numberWinner={4} />
 									)
 								}
 								{
 									countWinner === 19 && (
-										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} />
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} numberWinner={5} />
 									)
-								}
+								} */}
 								{/** ------------------- -step end -------------------- */}
 
-								
+
 								{
-									countWinner === 20 && (
+									countWinner === 8 && (
 										<SwiperComponentLast />
 									)
 								}

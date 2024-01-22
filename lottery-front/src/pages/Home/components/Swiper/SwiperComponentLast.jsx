@@ -7,6 +7,8 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
+import LightSpeed from 'react-reveal/LightSpeed';
+
 // Import Confetti
 import Confetti from 'react-confetti'
 
@@ -70,7 +72,10 @@ export function SwiperComponentLast({  }) {
 						))
 					}
 				</Swiper>
-				<button className="Button ButtonResult" onClick={handleButtonClickResult} />
+
+				<LightSpeed>
+					<button className="Button ButtonResult" onClick={handleButtonClickResult} />
+				</LightSpeed>
 			</div>
 		</>
 	);

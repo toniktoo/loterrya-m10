@@ -12,6 +12,8 @@ import Confetti from 'react-confetti'
 
 import { useAlert } from 'react-alert'
 
+import LightSpeed from 'react-reveal/LightSpeed';
+
 import './styles.css';
 
 import PathImagePhone from '../../../../assets/Phone.svg'
@@ -22,7 +24,7 @@ import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 import { ConfigImageCurrentGift } from '../../HomePage';
 
 
-export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typeGift, phone }) {
+export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typeGift, phone, numberWinner }) {
 	const [play, setPlay] = useState(false);
 	const [isPlayFirst, setIsPlayFirst] = useState(false);
 	const [playConfetti, setPlayConfetti] = useState(false);
@@ -64,7 +66,7 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 		if (!play && isPlayFirst) {
 			setPlayConfetti(true);
 			t = setTimeout(() => {
-				alert.show(typeGift + ',' + phone);
+				alert.show(typeGift + ',' + phone + ',' + numberWinner);
 				setPlayConfetti(false);
 				setCountWinner(prev => prev += 1)
 			}, 5000);
@@ -81,6 +83,8 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 		}
 	}, [loopAutoplay])
 
+	console.log('play', play)
+	console.log('showPanel', showPanel)
 	return (
 		<>
 			<div className='ContainerSwiper'>
@@ -124,7 +128,7 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 						))
 					}
 				</Swiper>
-				<button className="Button ButtonPlay" onClick={startAutoplay} />
+				<button className="Button ButtonPlay" onClick={startAutoplay} disabled={(play || showPanel)}/>
 				{
 					playConfetti && (
 						<Confetti
@@ -132,9 +136,16 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 							height={700}
 							initialVelocityY={1000}
 						/>
-					)}
+					)
+				}
 			</div>
-			{<img src={ConfigImageCurrentGift[typeGift]} width="800" height="800" className="ImageCurrentGift" />}
+			{!loopAutoplay ? (
+				<LightSpeed right>
+					<img src={ConfigImageCurrentGift[typeGift]} width="800" height="800" className="ImageCurrentGift" />
+				</LightSpeed>
+			) : (
+				<img src={ConfigImageCurrentGift[typeGift]} width="800" height="800" className="ImageCurrentGift" />
+			)}
 		</>
 	);
 }
