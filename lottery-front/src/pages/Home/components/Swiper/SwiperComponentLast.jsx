@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState, useMemo } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { redirect, useNavigate } from "react-router-dom";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -21,10 +22,10 @@ import PathImageM10Logo from '../../../../assets/m10_logo.svg'
 
 // import required modules
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
+import { RoutesConfig } from '../../../../configs';
 
 export function SwiperComponentLast({  }) {
-	const [isShowResult, setIsShowResult] = useState(false);
-
+	const navigate = useNavigate();
 	const alert = useAlert();
 
 	useEffect(() => {
@@ -34,7 +35,7 @@ export function SwiperComponentLast({  }) {
 	const swiperRef = useRef(null);
 
 	const handleButtonClickResult = () => {
-		setIsShowResult(true);
+		navigate(RoutesConfig.RESULT)
 	}
 
 	return (

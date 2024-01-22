@@ -1,0 +1,83 @@
+.Header {
+	width: 100%;
+	height: 30vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Logo {
+	background-image: url("../../assets/lotereya_label.svg");
+	background-size: cover;
+ 	background-position: center;
+ 	background-repeat: no-repeat;
+	width: 25vw;
+	height: 20vh;
+	min-height: 230px;
+}
+
+.Main {
+	width: 100%;
+	height: 70vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	flex-direction: column;
+	overflow: auto;
+}
+
+.Row {
+	display: flex;
+	border: 2px solid #02205f; /* Граница для всего контейнера */
+	border-radius: 16px; 
+	margin: 16px;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+	height: 5vh;
+	color: #02205f;
+}
+
+.Section {
+  padding: 10px; 
+  border-right: 2px solid #02205f; 
+  flex: 1; 
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.Section:last-child {
+  border-right: none; 
+}
+
+.List {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.NameGift {
+	
+}
+
+.list {
+  margin-bottom: 20px;
+  width: 60vw; /* Отступ между списками */
+}
+
+h2 {
+  margin-left: 16px; /* Отступ названия списка */
+}
+
+.Item {
+  display: flex; /* Использование flexbox для выравнивания прямоугольников */
+  flex-wrap: wrap; /* Перенос элементов на новую строку при нехватке места */
+  align-content: flex-start; /* Выравнивание элементов в начало контейнера */
+}
+
+.rectangle {
+ 
+}

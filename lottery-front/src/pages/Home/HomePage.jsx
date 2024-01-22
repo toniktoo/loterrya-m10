@@ -35,11 +35,10 @@ export const ConfigImageCurrentGift = {
 	[TYPE_GIFT_7]: ImageCar,
 }
 
-export const HomePage = () => {
+export const HomePage = ({ listWinners, setListWinners }) => {
 	const [statusPage, toggleStatusPage] = useState('init');
 	const [countWinner, setCountWinner] = useState(0);
 	const [isLoading, setIsLoading] = useState(false);
-	const [listWinners, setListWinners] = useState(null);
 
 	useEffect(() => {
 		setIsLoading(true);

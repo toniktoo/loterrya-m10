@@ -83,8 +83,6 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 		}
 	}, [loopAutoplay])
 
-	console.log('play', play)
-	console.log('showPanel', showPanel)
 	return (
 		<>
 			<div className='ContainerSwiper'>

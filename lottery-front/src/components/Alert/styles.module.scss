@@ -1,35 +1,35 @@
 .Alert {
-	height: 5vh;
 	display: flex;
-	align-items: center;
-	gap: 10px;
-	border-radius: 8px;
-	border: 1px solid #000;
-	padding: 8px;
+	border: 2px solid #02205f; /* Граница для всего контейнера */
+	border-radius: 16px; 
 	margin: 16px;
-	position: relative;
-	padding-top: -6px;
-	width: 22vw;
-}
-
-.NumberGift {
-	position: absolute;
-    left: 26px;
-    top: -8px;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.ImageGift {
-    position: absolute;
-    top: -5.8vh;
-    left: 0.6vw;
-}
-
-.Winner {
-	position: absolute;
 	font-size: 18px;
 	font-style: italic;
 	font-weight: bold;
-	right: 16px;
+	height: 5vh;
+	color: #02205f;
+}
+
+.NumberGift {
+}
+
+.NameGift {
+	text-align: center;
+    text-wrap: nowrap;
+}
+
+.Winner {
+}
+
+.Section {
+  padding: 10px; 
+  border-right: 2px solid #02205f; 
+  flex: 1; 
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.Section:last-child {
+  border-right: none; 
 }

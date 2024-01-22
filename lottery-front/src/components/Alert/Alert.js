@@ -9,6 +9,8 @@ import ImageWatch from '../../assets/watch.svg';
 import ImageAirpods from '../../assets/airpods.svg';
 import ImageCar from '../../assets/car.svg';
 
+import cn from 'classnames';
+
 const TYPE_GIFT_1 = 'money_100';
 const TYPE_GIFT_2 = 'money_500';
 const TYPE_GIFT_3 = 'samsung';
@@ -20,92 +22,31 @@ const TYPE_GIFT_7 = 'car';
 const ConfigImageCurrentGift = {
 	[TYPE_GIFT_1]: {
 		path: ImageMoney100,
-		styleImage: {
-			left: '3.4vw',
-			width: '8vw',
-			height: '5vh',
-			top: '0.7vh'
-		},
-		styleAlert: {
-			height: '6vh',
-		}
+		name: 'AZN 100'
 	},
 	[TYPE_GIFT_2]: {
 		path: ImageMoney500,
-		styleImage: {
-			left: '3.4vw',
-			width: '8vw',
-			height: '5vh',
-			top: '0.7vh'
-		},
-		styleAlert: {
-			height: '6vh',
-		}
+		name: 'AZN 500'
 	},
 	[TYPE_GIFT_3]: {
 		path: ImageSamsung,
-		styleImage: {
-			top: '-13.8vh',
-			left: '3.4vw',
-			width: '7vw',
-			height: '400px'
-		},
-		styleAlert: {
-			height: '6.5vh',
-			width: '18vw',
-		}
+		name: 'Samsung S22'
 	},
 	[TYPE_GIFT_4]: {
 		path: ImageAirpods,
-		styleImage: {
-			top: '-13.8vh',
-			left: '3.4vw',
-			width: '7vw',
-			height: '400px'
-		},
-		styleAlert: {
-			height: '6.5vh',
-			width: '18vw',
-		}
+		name: 'Airpods 3'
 	},
 	[TYPE_GIFT_5]: {
 		path: ImageWatch,
-		styleImage: {
-			top: '-13.8vh',
-			left: '3.4vw',
-			width: '7vw',
-			height: '400px'
-		},
-		styleAlert: {
-			height: '6.5vh',
-			width: '18vw',
-		}
+		name: 'Apple Watch'
 	},
 	[TYPE_GIFT_6]: {
 		path: ImagePhone,
-		styleImage: {
-			top: '-13.8vh',
-			left: '3.4vw',
-			width: '7vw',
-			height: '400px'
-		},
-		styleAlert: {
-			height: '6.5vh',
-			width: '18vw',
-		}
+		name: 'Iphone 15'
 	},
 	[TYPE_GIFT_7]: {
 		path: ImageCar,
-		styleImage: {
-			top: '-13.8vh',
-			left: '3.4vw',
-			width: '7vw',
-			height: '400px'
-		},
-		styleAlert: {
-			height: '6.5vh',
-			width: '18vw',
-		}
+		name: 'Volkswagen ID4'
 	},
 }
 
@@ -117,10 +58,10 @@ export const Alert = (props) => {
 	const countWinner = Number(msg.split(',')[2]) + 1;
 
 	return (
-		<div className={styles.Alert} key={phoneUser} style={ConfigImageCurrentGift[ImagePathGift]?.styleAlert}>
-			<p className={styles.NumberGift}>{countWinner}</p>
-			<img src={ConfigImageCurrentGift[ImagePathGift].path} className={styles.ImageGift} style={ConfigImageCurrentGift[ImagePathGift]?.styleImage}/>
-			<p className={styles.Winner}>{`+${phoneUser}`}</p>
+		<div className={styles.Alert} key={phoneUser}>
+			<p className={cn(styles.Section, styles.NumberGift)}>{countWinner}</p>
+			<p className={cn(styles.Section, styles.NameGift)}>{ConfigImageCurrentGift[ImagePathGift]?.name}</p>
+			<p className={cn(styles.Section, styles.Winner)}>{`+${phoneUser}`}</p>
 		</div>
 	)
 }
