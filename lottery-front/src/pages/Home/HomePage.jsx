@@ -6,9 +6,9 @@ import { SwiperComponent, SwiperComponentLast } from "./components";
 import ImageMoney100 from '../../assets/100.svg';
 import ImageMoney500 from '../../assets/500.svg';
 import ImageSamsung from '../../assets/samsung.svg';
-import ImagePhone from '../../assets/Phone.svg';
+import ImagePhone from '../../assets/iphone.svg';
 import ImageWatch from '../../assets/watch.svg';
-import ImageAirpods from '../../assets/watch.svg';
+import ImageAirpods from '../../assets/airpods.svg';
 import ImageCar from '../../assets/car.svg';
 import { Loader } from "../../components";
 import axios from "axios";
@@ -196,72 +196,98 @@ export const HomePage = () => {
 								} */}
 								{/** ------------------- -step end -------------------- */}
 
-
+								{/** s-------------------- step start -------------------- */}
 								{
 									countWinner === 8 && (
-										<SwiperComponentLast />
-									)
-								}
-
-
-								{/* {
-									countWinner === 0 && (
-										<SwiperComponent key={0} ind={0} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_1} />
-									)
-								}
-								{
-									countWinner === 1 && (
-										<SwiperComponent key={1} ind={1} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_1} />
-									)
-								}
-								{
-									countWinner === 2 && (
-										<SwiperComponent key={2} ind={2} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_2} />
-									)
-								}
-								{
-									countWinner === 3 && (
-										<SwiperComponentLast />
-									)
-								} */}
-
-
-
-								{/* {
-									countWinner === 3 && (
-										<SwiperComponent setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_2} />
-									)
-								}
-								{
-									countWinner === 4 && (
-										<SwiperComponent setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_3} />
-									)
-								}
-								{
-									countWinner === 5 && (
-										<SwiperComponent setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_4} />
-									)
-								}
-								{
-									countWinner === 6 && (
-										<SwiperComponent setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_5} />
-									)
-								}
-								{
-									countWinner === 7 && (
-										<SwiperComponent setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_6} />
-									)
-								}
-								{
-									countWinner === 8 && (
-										<SwiperComponent setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_7} />
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_5} phone={listWinners[TYPE_GIFT_5][countWinner]} numberWinner={1} />
 									)
 								}
 								{
 									countWinner === 9 && (
-										<SwiperComponent countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_7} />
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_5} phone={listWinners[TYPE_GIFT_5][countWinner]} numberWinner={2} />
+									)
+								}
+								{/* {
+									countWinner === 17 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} numberWinner={3} />
+									)
+								}
+								{
+									countWinner === 18 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} numberWinner={4} />
+									)
+								}
+								{
+									countWinner === 19 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} numberWinner={5} />
 									)
 								} */}
+								{/** ------------------- -step end -------------------- */}
+
+								{/** s-------------------- step start -------------------- */}
+								{
+									countWinner === 10 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_6} phone={listWinners[TYPE_GIFT_6][countWinner]} numberWinner={1} />
+									)
+								}
+								{
+									countWinner === 11 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_6} phone={listWinners[TYPE_GIFT_6][countWinner]} numberWinner={2} />
+									)
+								}
+								{/* {
+									countWinner === 17 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} numberWinner={3} />
+									)
+								}
+								{
+									countWinner === 18 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} numberWinner={4} />
+									)
+								}
+								{
+									countWinner === 19 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} numberWinner={5} />
+									)
+								} */}
+								{/** ------------------- -step end -------------------- */}
+
+								{/** s-------------------- step start -------------------- */}
+								{
+									countWinner === 12 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_7} phone={listWinners[TYPE_GIFT_7][countWinner]} numberWinner={1} />
+									)
+								}
+								{
+									countWinner === 13 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_7} phone={listWinners[TYPE_GIFT_7][countWinner]} numberWinner={2} />
+									)
+								}
+								{/* {
+									countWinner === 17 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} numberWinner={3} />
+									)
+								}
+								{
+									countWinner === 18 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} numberWinner={4} />
+									)
+								}
+								{
+									countWinner === 19 && (
+										<SwiperComponent key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4][countWinner]} numberWinner={5} />
+									)
+								} */}
+								{/** ------------------- -step end -------------------- */}
+
+
+
+
+								{
+									countWinner === 14 && (
+										<SwiperComponentLast />
+									)
+								}
 							</div>
 						</>
 					)

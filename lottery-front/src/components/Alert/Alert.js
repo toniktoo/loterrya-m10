@@ -4,12 +4,11 @@ import styles from './styles.module.scss'
 import ImageMoney100 from '../../assets/alert_100.jpg';
 import ImageMoney500 from '../../assets/alert_500.jpg';
 import ImageSamsung from '../../assets/samsung.svg';
-import ImagePhone from '../../assets/Phone.svg';
+import ImagePhone from '../../assets/iphone.svg';
 import ImageWatch from '../../assets/watch.svg';
-import ImageAirpods from '../../assets/watch.svg';
+import ImageAirpods from '../../assets/airpods.svg';
 import ImageCar from '../../assets/car.svg';
 
-const TYPE_GIFT_DEFAULT = 'default';
 const TYPE_GIFT_1 = 'money_100';
 const TYPE_GIFT_2 = 'money_500';
 const TYPE_GIFT_3 = 'samsung';
@@ -26,6 +25,9 @@ const ConfigImageCurrentGift = {
 			width: '8vw',
 			height: '5vh',
 			top: '0.7vh'
+		},
+		styleAlert: {
+			height: '6vh',
 		}
 	},
 	[TYPE_GIFT_2]: {
@@ -43,6 +45,45 @@ const ConfigImageCurrentGift = {
 	[TYPE_GIFT_3]: {
 		path: ImageSamsung,
 		styleImage: {
+			top: '-13vh',
+			left: '3.4vw',
+			width: '7vw',
+			height: '400px'
+		},
+		styleAlert: {
+			height: '6.5vh',
+			width: '18vw',
+		}
+	},
+	[TYPE_GIFT_4]: {
+		path: ImageAirpods,
+		styleImage: {
+			top: '-13vh',
+			left: '3.4vw',
+			width: '7vw',
+			height: '400px'
+		},
+		styleAlert: {
+			height: '6.5vh',
+			width: '18vw',
+		}
+	},
+	[TYPE_GIFT_5]: {
+		path: ImageWatch,
+		styleImage: {
+			top: '-13vh',
+			left: '3.4vw',
+			width: '7vw',
+			height: '400px'
+		},
+		styleAlert: {
+			height: '6.5vh',
+			width: '18vw',
+		}
+	},
+	[TYPE_GIFT_6]: {
+		path: ImagePhone,
+		styleImage: {
 			top: '-13.8vh',
 			left: '3.4vw',
 			width: '7vw',
@@ -53,10 +94,19 @@ const ConfigImageCurrentGift = {
 			width: '18vw',
 		}
 	},
-	[TYPE_GIFT_4]: ImageAirpods,
-	[TYPE_GIFT_5]: ImageWatch,
-	[TYPE_GIFT_6]: ImagePhone,
-	[TYPE_GIFT_7]: ImageCar,
+	[TYPE_GIFT_7]: {
+		path: ImageCar,
+		styleImage: {
+			top: '-13.8vh',
+			left: '3.4vw',
+			width: '7vw',
+			height: '400px'
+		},
+		styleAlert: {
+			height: '6.5vh',
+			width: '18vw',
+		}
+	},
 }
 
 export const Alert = (props) => {
