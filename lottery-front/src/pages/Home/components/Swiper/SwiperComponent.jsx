@@ -66,7 +66,7 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 		if (!play && isPlayFirst) {
 			setPlayConfetti(true);
 			t = setTimeout(() => {
-				alert.show(typeGift + ',' + phone + ',' + numberWinner);
+				alert.show(typeGift + ',' + phone[numberWinner] + ',' + numberWinner);
 				setPlayConfetti(false);
 				setCountWinner(prev => prev += 1)
 			}, 5000);
@@ -121,7 +121,7 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 									<img src={PathImagePhone} height={600} />
 									<img src={PathImageM10Logo} height={300} className='M10Logo' />
 									<div className={`info-panel ${showPanel ? 'visible' : ''}`}>
-										+{phone}
+										+{phone[numberWinner]}
 									</div>
 								</div>
 							</SwiperSlide>

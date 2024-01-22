@@ -84,7 +84,7 @@ const ConfigImageCurrentGift = {
 	[TYPE_GIFT_6]: {
 		path: ImagePhone,
 		styleImage: {
-			top: '-13.8vh',
+			top: '-13vh',
 			left: '3.4vw',
 			width: '7vw',
 			height: '400px'
@@ -97,7 +97,7 @@ const ConfigImageCurrentGift = {
 	[TYPE_GIFT_7]: {
 		path: ImageCar,
 		styleImage: {
-			top: '-13.8vh',
+			top: '-13vh',
 			left: '3.4vw',
 			width: '7vw',
 			height: '400px'
@@ -114,7 +114,7 @@ export const Alert = (props) => {
 	const msg = props.message;
 	const ImagePathGift = msg.split(',')[0]
 	const phoneUser = msg.split(',')[1]
-	const countWinner = msg.split(',')[2]
+	const countWinner = Number(msg.split(',')[2]) + 1;
 
 	return (
 		<div className={styles.Alert} key={phoneUser} style={ConfigImageCurrentGift[ImagePathGift]?.styleAlert}>
