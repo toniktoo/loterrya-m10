@@ -130,7 +130,7 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 				{
 					playConfetti && (
 						<Confetti
-							width={900}
+							width={1000}
 							height={700}
 							initialVelocityY={1000}
 						/>
