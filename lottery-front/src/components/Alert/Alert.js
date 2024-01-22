@@ -1,7 +1,55 @@
 
 import styles from './styles.module.scss'
 
-import { ConfigImageCurrentGift } from '../../pages'
+import ImageMoney100 from '../../assets/alert_100.jpg';
+import ImageMoney500 from '../../assets/alert_500.jpg';
+import ImageSamsung from '../../assets/samsung.svg';
+import ImagePhone from '../../assets/Phone.svg';
+import ImageWatch from '../../assets/watch.svg';
+import ImageAirpods from '../../assets/watch.svg';
+import ImageCar from '../../assets/car.svg';
+
+const TYPE_GIFT_1 = 'money_100';
+const TYPE_GIFT_2 = 'money_500';
+const TYPE_GIFT_3 = 'samsung';
+const TYPE_GIFT_4 = 'airpods';
+const TYPE_GIFT_5 = 'watch';
+const TYPE_GIFT_6 = 'iphone';
+const TYPE_GIFT_7 = 'car';
+
+const ConfigImageCurrentGift = {
+	[TYPE_GIFT_1]: {
+		path: ImageMoney100,
+		styleImage: {
+		top: '-13.8vh',
+			left: '3.4vw',
+			width: '7vw',
+			height: '400px'
+		}
+	},
+	[TYPE_GIFT_2]: {
+		path: ImageMoney500,
+		styleImage: {
+			left: '3.4vw',
+			width: '8vw',
+			height: '5vh',
+			top: '0.7vh'
+		}
+	},
+	[TYPE_GIFT_3]: {
+		path: ImageSamsung,
+		styleImage: {
+			top: '-13.8vh',
+			left: '3.4vw',
+			width: '7vw',
+			height: '400px'
+		}
+	},
+	[TYPE_GIFT_4]: ImageAirpods,
+	[TYPE_GIFT_5]: ImageWatch,
+	[TYPE_GIFT_6]: ImagePhone,
+	[TYPE_GIFT_7]: ImageCar,
+}
 
 export const Alert = (props) => {
 
@@ -13,7 +61,7 @@ export const Alert = (props) => {
 	return (
 		<div className={styles.Alert} key={phoneUser}>
 			<p className={styles.NumberGift}>{countWinner}</p>
-			<img src={ConfigImageCurrentGift[ImagePathGift]} width={200} height={200} className={styles.ImageGift} />
+			<img src={ConfigImageCurrentGift[ImagePathGift].path} className={styles.ImageGift} style={ConfigImageCurrentGift[ImagePathGift].styleImage}/>
 			<p className={styles.Winner}>{`+${phoneUser}`}</p>
 		</div>
 	)

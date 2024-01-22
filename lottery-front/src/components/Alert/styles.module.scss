@@ -1,6 +1,5 @@
 .Alert {
-	width: 310px;
-	height: 50px;
+	height: 5vh;
 	display: flex;
 	align-items: center;
 	gap: 10px;
@@ -10,6 +9,7 @@
 	margin: 16px;
 	position: relative;
 	padding-top: -6px;
+	width: 22vw;
 }
 
 .NumberGift {
@@ -21,8 +21,9 @@
 }
 
 .ImageGift {
-	position: absolute;
-	top: -64px;
+    position: absolute;
+    top: -5.8vh;
+    left: 0.6vw;
 }
 
 .Winner {
