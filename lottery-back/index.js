@@ -146,10 +146,15 @@ app.get('/get-count-winners/', async (req, res) => {
 	console.log(' /get-count-winners start users', users?.length)
 
 	try {
+		if (!users || !users?.length) {
+			await getInit();
+		}
+
+
 		const count = req.query.count;
 		const typeGift = req.query.typeGift;
 		const clientId = req.query.clientId;
-		const winners = selectWinners(clientId, users, typeGift, count)
+		const winners = selectWinners(clientId, users, typeGift, count);
 		console.log(' /get-count-winners end users', users?.length)
 
 		return res.json(winners);
@@ -164,17 +169,6 @@ app.get('/save/', (req, res) => {
 	const clientId = req.query.clientId;
 	const filePath = `./result/result-${String(clientId)}.json`;
 
-	if (saveIndexes.includes(String(clientId))) {
-		fs.readFile(filePath, 'utf8', (err, data) => {
-			if (err) {
-				console.error('Ошибка тут 1', err);
-				return res.status(404).send('Файл не найден');
-			}
-			console.log('data', data)
-			return res.json(JSON.parse(data));
-		});
-	}
-
 	// Создание папки result, если она не существует
 	if (!fs.existsSync('./result')) {
 		fs.mkdirSync('./result');
@@ -185,13 +179,25 @@ app.get('/save/', (req, res) => {
 	fs.writeFile(filePath, JSON.stringify(result, null, 2), 'utf8', (err) => {
 		if (err) {
 			console.error(err);
-			return res.status(500).send('Не удалось сохранить файл');
+			return res.status(400).send('Не удалось сохранить файл');
 		} else {
 			saveIndexes.push(String(clientId))
 			return res.send('Файл успешно сохранен');
 		}
 	});
+});
 
+app.get('/get-all-winners/', (req, res) => {
+	const clientId = req.query.clientId;
+	console.log('clientId', clientId)
+	const filePath = `./result/result-${String(clientId)}.json`;
+
+	return fs.readFile(filePath, 'utf8', (err, data) => {
+		if (err) {
+			return res.status(404).send('Файл не найден');
+		}
+		return res.json(JSON.parse(data));
+	});
 });
 
 app.listen(port, () => {

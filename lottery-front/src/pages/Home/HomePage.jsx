@@ -12,6 +12,7 @@ import ImageAirpods from '../../assets/airpods.svg';
 import ImageCar from '../../assets/car.svg';
 import { Loader } from "../../components";
 import axios from "axios";
+import { ClientId } from "../../App";
 
 export const URL_API = 'http://45.135.164.125:3009'
 // export const URL_API = 'http://localhost:3009'
@@ -35,13 +36,16 @@ export const ConfigImageCurrentGift = {
 	[TYPE_GIFT_7]: ImageCar,
 }
 
-export const HomePage = ({ listWinners, setListWinners, clientId }) => {
+export const HomePage = ({ listWinners, setListWinners }) => {
 	const [statusPage, toggleStatusPage] = useState('init');
 	const [countWinner, setCountWinner] = useState(0);
 	const [isLoading, setIsLoading] = useState(false);
+	const [clientId, setClientId] = useState(null);
+	const uniqueId = String(Math.random());
 
 	const handlePlay = async () => {
 		try {
+			window.localStorage.setItem(ClientId, uniqueId);
 			toggleStatusPage('play');
 		} finally {
 		}
@@ -62,6 +66,23 @@ export const HomePage = ({ listWinners, setListWinners, clientId }) => {
 							<div className={styles.ImageAllGifts} />
 							<button className={styles.ButtonStart} onClick={handlePlay} />
 						</>
+					)
+				}
+				{
+					statusPage === 'play2' && (
+						<div className={styles.ContainerSwiper}>
+							{/** -------------------- step start -------------------- */}
+							{
+								countWinner === 0 && (
+									<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_1} phone={listWinners[TYPE_GIFT_1]} numberWinner={0} listWinners={listWinners} setListWinners={setListWinners} />
+								)
+							}
+							{
+								countWinner === 1 && (
+									<SwiperComponentLast />
+								)
+							}
+						</div>
 					)
 				}
 				{

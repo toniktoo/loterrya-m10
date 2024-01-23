@@ -12,22 +12,22 @@ function App() {
   const [clientId, setClientId] = useState(null);
   const uniqueId = String(Math.random());
 
-  useEffect(() => {
-    let id;
-    id = window.localStorage.getItem(ClientId);
-    if (!id) {
-      id = window.localStorage.setItem(ClientId, uniqueId);
-    }
-    setClientId(id)
-  }, [clientId])
+  // useEffect(() => {
+  //   let id;
+  //   id = window.localStorage.getItem(ClientId);
+  //   if (!id) {
+  //     id = window.localStorage.setItem(ClientId, uniqueId);
+  //   }
+  //   setClientId(id)
+  // }, [clientId])
 
 
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route index element={<HomePage listWinners={listWinners} setListWinners={setListWinners} clientId={clientId} />} />
-          <Route path={RoutesConfig.RESULT} element={<ResultPage clientId={clientId} />} />
+          <Route index element={<HomePage listWinners={listWinners} setListWinners={setListWinners} />} />
+          <Route path={RoutesConfig.RESULT} element={<ResultPage />} />
           <Route path={RoutesConfig.NOT_FOUND} element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>

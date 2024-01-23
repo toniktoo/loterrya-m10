@@ -23,6 +23,9 @@ import PathImageM10Logo from '../../../../assets/m10_logo.svg'
 // import required modules
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 import { RoutesConfig } from '../../../../configs';
+import { URL_API } from '../../..';
+import axios from 'axios';
+import { ClientId } from '../../../../App';
 
 export function SwiperComponentLast({  }) {
 	const navigate = useNavigate();
@@ -35,7 +38,15 @@ export function SwiperComponentLast({  }) {
 	const swiperRef = useRef(null);
 
 	const handleButtonClickResult = () => {
-		navigate(RoutesConfig.RESULT)
+		const id = window.localStorage.getItem(ClientId)
+
+		axios.get(`${URL_API}/save/?&clientId=${id}`)
+			.then((res) => {
+				console.log('res save winners', res)
+				// localStorage.removeItem(ClientId)
+				navigate(RoutesConfig.RESULT)
+			});
+		
 	}
 
 	return (

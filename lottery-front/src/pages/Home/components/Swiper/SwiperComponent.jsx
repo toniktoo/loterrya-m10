@@ -23,14 +23,17 @@ import PathImageM10Logo from '../../../../assets/m10_logo.svg'
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 import { ConfigImageCurrentGift, TYPE_GIFT_7, URL_API } from '../../HomePage';
 import axios from 'axios';
+import { Loader } from '../../../../components';
+import { ClientId } from '../../../../App';
 
 function sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typeGift, phone, numberWinner, listWinners, setListWinners, clientId, countWinnersForRequest = 1 }) {
+export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typeGift, phone, numberWinner, listWinners, setListWinners, countWinnersForRequest = 1 }) {
 	const [play, setPlay] = useState(false);
 	const [isPlayFirst, setIsPlayFirst] = useState(false);
+	const [isLoadingInitUsers, setIsLoadingInitUsers] = useState(false);
 	const [playConfetti, setPlayConfetti] = useState(false);
 	const [showPanel, setShowPanel] = useState(false);
 	const togglePanel = () => {
@@ -51,17 +54,23 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 	useEffect(() => {
 		let t;
 		if (play) {
-			axios.get(`${URL_API}/get-count-winners/?count=${numberWinner + 1}&typeGift=${typeGift}&clientId=${clientId}`).then((res) => {
-				console.log('start 1')
-				setListWinners(res?.data)
-				setIsPlayFirst(true);
-				swiperRef.current.swiper.autoplay.start();
-				t = setTimeout(() => {
-					togglePanel()
-					swiperRef.current.swiper.autoplay.stop();
-					setPlay(false);
-				}, 3000);
-			});
+			const clientId = window.localStorage.getItem(ClientId);
+			setIsLoadingInitUsers(true)
+			axios.get(`${URL_API}/get-count-winners/?count=${numberWinner + 1}&typeGift=${typeGift}&clientId=${clientId}`)
+				.then((res) => {
+					setIsLoadingInitUsers(false)
+					console.log('start 1')
+					setListWinners(res?.data)
+					setIsPlayFirst(true);
+					swiperRef.current.swiper.autoplay.start();
+					t = setTimeout(() => {
+						togglePanel()
+						swiperRef.current.swiper.autoplay.stop();
+						setPlay(false);
+					}, 3000);
+				}).catch(err => {
+					console.log('err ловлю эту ошибка', err)
+				});
 		}
 		return () => {
 			clearTimeout(t);
@@ -94,6 +103,7 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 
 	return (
 		<>
+			<Loader isLoading={isLoadingInitUsers} />
 			<div className='ContainerSwiper'>
 				<Swiper
 					effect={'coverflow'}
@@ -139,7 +149,7 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 				{
 					playConfetti && (
 						<Confetti
-							width={1000}
+							width={1050}
 							height={700}
 							initialVelocityY={1000}
 						/>
