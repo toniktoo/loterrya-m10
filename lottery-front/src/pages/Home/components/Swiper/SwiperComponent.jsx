@@ -21,15 +21,18 @@ import PathImageM10Logo from '../../../../assets/m10_logo.svg'
 
 // import required modules
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
-import { ConfigImageCurrentGift } from '../../HomePage';
+import { ConfigImageCurrentGift, TYPE_GIFT_7, URL_API } from '../../HomePage';
+import axios from 'axios';
 
+function sleep(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typeGift, phone, numberWinner }) {
+export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typeGift, phone, numberWinner, listWinners, setListWinners, clientId, countWinnersForRequest = 1 }) {
 	const [play, setPlay] = useState(false);
 	const [isPlayFirst, setIsPlayFirst] = useState(false);
 	const [playConfetti, setPlayConfetti] = useState(false);
 	const [showPanel, setShowPanel] = useState(false);
-
 	const togglePanel = () => {
 		setShowPanel(!showPanel);
 	};
@@ -48,13 +51,17 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 	useEffect(() => {
 		let t;
 		if (play) {
-			setIsPlayFirst(true);
-			swiperRef.current.swiper.autoplay.start();
-			t = setTimeout(() => {
-				togglePanel()
-				swiperRef.current.swiper.autoplay.stop();
-				setPlay(false);
-			}, 3000);
+			axios.get(`${URL_API}/get-count-winners/?count=${numberWinner + 1}&typeGift=${typeGift}&clientId=${clientId}`).then((res) => {
+				console.log('start 1')
+				setListWinners(res?.data)
+				setIsPlayFirst(true);
+				swiperRef.current.swiper.autoplay.start();
+				t = setTimeout(() => {
+					togglePanel()
+					swiperRef.current.swiper.autoplay.stop();
+					setPlay(false);
+				}, 3000);
+			});
 		}
 		return () => {
 			clearTimeout(t);
@@ -66,10 +73,10 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 		if (!play && isPlayFirst) {
 			setPlayConfetti(true);
 			t = setTimeout(() => {
-				alert.show(typeGift + ',' + phone[numberWinner] + ',' + numberWinner);
+				alert.show(typeGift + ',' + listWinners['0'] + ',' + numberWinner);
 				setPlayConfetti(false);
 				setCountWinner(prev => prev += 1)
-			}, 5000);
+			}, typeGift == TYPE_GIFT_7 ? 10000 : 6000);
 		}
 		return () => {
 			clearTimeout(t);
@@ -82,6 +89,8 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 			startAutoplay()
 		}
 	}, [loopAutoplay])
+
+
 
 	return (
 		<>
@@ -114,19 +123,19 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 				>
 					{
 						Array.from({ length: 20 }, (_, index) => (
-							<SwiperSlide key={countWinner + index}>
+							<SwiperSlide key={countWinner + index + typeGift}>
 								<div className='ContentSlide'>
 									<img src={PathImagePhone} height={600} />
 									<img src={PathImageM10Logo} height={300} className='M10Logo' />
 									<div className={`info-panel ${showPanel ? 'visible' : ''}`}>
-										+{phone[numberWinner]}
+										+{listWinners['0']}
 									</div>
 								</div>
 							</SwiperSlide>
 						))
 					}
 				</Swiper>
-				<button className="Button ButtonPlay" onClick={startAutoplay} disabled={(play || showPanel)}/>
+				<button className="Button ButtonPlay" onClick={startAutoplay} disabled={(play || showPanel)} />
 				{
 					playConfetti && (
 						<Confetti

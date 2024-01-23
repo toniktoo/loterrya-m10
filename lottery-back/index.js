@@ -1,6 +1,7 @@
 const express = require('express');
 const xlsx = require('xlsx');
 const cors = require('cors');
+const fs = require('fs');
 
 const app = express();
 const port = 3009;
@@ -84,6 +85,7 @@ app.get('/', async (req, res) => {
 
 app.get('/init', async (req, res) => {
 	try {
+		console.log(' /init users', users)
 		await getInit();
 		res.json(JSON.stringify({ status: 1 }));
 	} catch (error) {
@@ -93,6 +95,8 @@ app.get('/init', async (req, res) => {
 
 app.get('/get-winners', async (req, res) => {
 	try {
+		console.log(' /init users', users?.length)
+
 		const winners = await getWinners();
 		res.json(JSON.stringify(winners));
 	} catch (error) {
@@ -100,6 +104,98 @@ app.get('/get-winners', async (req, res) => {
 	}
 });
 
+let result = {};
+let winnersByClientId = {};
+const saveIndexes = [];
+
+function selectWinners(clientId, users, typeGift, count) {
+	if (!winnersByClientId[clientId]) {
+		winnersByClientId[clientId] = new Set();
+	}
+
+	if (!result[clientId]) {
+		result[clientId] = {};
+	}
+
+	if (!result[clientId][typeGift]) {
+		result[clientId][typeGift] = [];
+	}
+
+	let newlySelectedWinners = [];
+	let selectedWinnersCount = result[clientId][typeGift].length;
+
+	while (selectedWinnersCount < count && winnersByClientId[clientId].size < users.length) {
+		const randomIndex = Math.floor(Math.random() * users.length);
+		const selectedUser = users[randomIndex];
+
+		if (!winnersByClientId[clientId].has(selectedUser.phone)) {
+			winnersByClientId[clientId].add(selectedUser.phone);
+			result[clientId][typeGift].push({
+				phone: selectedUser.phone,
+				operation_id: selectedUser.operation_id
+			});
+			newlySelectedWinners.push(selectedUser.phone);
+			selectedWinnersCount++;
+		}
+	}
+
+	return newlySelectedWinners;
+}
+
+app.get('/get-count-winners/', async (req, res) => {
+	console.log(' /get-count-winners start users', users?.length)
+
+	try {
+		const count = req.query.count;
+		const typeGift = req.query.typeGift;
+		const clientId = req.query.clientId;
+		const winners = selectWinners(clientId, users, typeGift, count)
+		console.log(' /get-count-winners end users', users?.length)
+
+		return res.json(winners);
+	} catch (error) {
+		return res.status(500).send('Ошибка при генерации списка победителей');
+	}
+});
+
+app.get('/save/', (req, res) => {
+	console.log(' /save start users', users?.length)
+
+	const clientId = req.query.clientId;
+	const filePath = `./result/result-${String(clientId)}.json`;
+
+	if (saveIndexes.includes(String(clientId))) {
+		fs.readFile(filePath, 'utf8', (err, data) => {
+			if (err) {
+				console.error('Ошибка тут 1', err);
+				return res.status(404).send('Файл не найден');
+			}
+			console.log('data', data)
+			return res.json(JSON.parse(data));
+		});
+	}
+
+	// Создание папки result, если она не существует
+	if (!fs.existsSync('./result')) {
+		fs.mkdirSync('./result');
+	}
+
+	res.json(result[clientId])
+
+	fs.writeFile(filePath, JSON.stringify(result, null, 2), 'utf8', (err) => {
+		if (err) {
+			console.error(err);
+			return res.status(500).send('Не удалось сохранить файл');
+		} else {
+			saveIndexes.push(String(clientId))
+			return res.send('Файл успешно сохранен');
+		}
+	});
+
+});
+
 app.listen(port, () => {
 	console.log(`Сервер запущен на http://localhost:${port}`);
 });
+
+//`${URL_API}/get-count-winners/?count=5&typeGift=${typeGift}&clientId=${clientId}`
