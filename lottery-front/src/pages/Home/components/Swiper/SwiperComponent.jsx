@@ -103,7 +103,7 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 
 	return (
 		<>
-			<Loader isLoading={isLoadingInitUsers} />
+			{/* <Loader isLoading={isLoadingInitUsers} /> */}
 			<div className='ContainerSwiper'>
 				<Swiper
 					effect={'coverflow'}
