@@ -25,24 +25,36 @@
   top: 10vh;
 }
 
+.swiper-slide-shadow-left {
+  background-image: none !important;
+}
+
+.swiper-slide-shadow-right {
+  background-image: none !important;
+}
+
+.ButtonContainer {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
 .Button {
-	background-image: url("../../../../assets/qalibi_sech_button.svg");
-	background-size: cover;
+	background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
-  width: 50vw;
-  height: 13vh;
-  position: absolute;
-  bottom: -10vh;
+  height: 115px;
+  width: 100%;
   background-color: transparent;
   border: none;
 }
 
 .ButtonPlay {
-	background-image: url("../../../../assets/qalibi_sech_button.svg");
+	background-image: url("../../../../assets/qalibi_sech_button-cropped.svg");
 }
 .ButtonResult {
-	background-image: url("../../../../assets/qaliblerin_siyahisi_button.svg");
+	background-image: url("../../../../assets/qaliblerin_siyahisi_button-cropped.svg");
 }
 
 .info-panel {
@@ -69,5 +81,5 @@
 .ImageCurrentGift {
 	position: absolute;
   right: -608px;
-  bottom: -269px;
+  bottom: -8vh;
 }

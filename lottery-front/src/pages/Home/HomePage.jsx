@@ -13,6 +13,7 @@ import ImageCar from '../../assets/car.svg';
 import { Loader } from "../../components";
 import axios from "axios";
 import { ClientId } from "../../App";
+import { ResultPage } from "../Result";
 
 export const URL_API = 'http://45.135.164.125:3009'
 // export const URL_API = 'http://localhost:3009'
@@ -37,7 +38,7 @@ export const ConfigImageCurrentGift = {
 }
 
 export const HomePage = ({ listWinners, setListWinners }) => {
-	const [statusPage, toggleStatusPage] = useState('init');
+	const [statusPage, setStatusPage] = useState('init');
 	const [countWinner, setCountWinner] = useState(0);
 	const [isLoading, setIsLoading] = useState(false);
 	const [clientId, setClientId] = useState(null);
@@ -46,10 +47,12 @@ export const HomePage = ({ listWinners, setListWinners }) => {
 	const handlePlay = async () => {
 		try {
 			window.localStorage.setItem(ClientId, uniqueId);
-			toggleStatusPage('play');
+			setStatusPage('play');
 		} finally {
 		}
 	}
+
+	const style = statusPage === 'result' && { overflowY: 'auto', height: 'inherit' }
 
 	return (
 		<div>
@@ -59,13 +62,18 @@ export const HomePage = ({ listWinners, setListWinners }) => {
 
 			{/* <Loader isLoading={isLoading} /> */}
 
-			<div className={styles.Main}>
+			<div className={styles.Main} style={{ ...style }}>
 				{
-					statusPage === 'init' && (
+					statusPage == 'init' && (
 						<>
 							<div className={styles.ImageAllGifts} />
 							<button className={styles.ButtonStart} onClick={handlePlay} />
 						</>
+					)
+				}
+				{
+					statusPage == 'result' && (
+						<ResultPage />
 					)
 				}
 				{
@@ -79,7 +87,7 @@ export const HomePage = ({ listWinners, setListWinners }) => {
 							}
 							{
 								countWinner === 1 && (
-									<SwiperComponentLast />
+									<SwiperComponentLast setStatusPage={setStatusPage} />
 								)
 							}
 						</div>
@@ -287,7 +295,7 @@ export const HomePage = ({ listWinners, setListWinners }) => {
 								{/** ------------------- -step end -------------------- */}
 								{
 									countWinner === 31 && (
-										<SwiperComponentLast />
+										<SwiperComponentLast setStatusPage={setStatusPage} />
 									)
 								}
 							</div>
@@ -295,6 +303,6 @@ export const HomePage = ({ listWinners, setListWinners }) => {
 					)
 				}
 			</div>
-		</div>
+		</div >
 	)
 }

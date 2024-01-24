@@ -85,8 +85,9 @@ app.get('/', async (req, res) => {
 
 app.get('/init', async (req, res) => {
 	try {
-		console.log(' /init users', users)
+		console.log(' /Начинаем парсинг клиентов')
 		await getInit();
+		console.log(' /Закончили парсинг клиентов')
 		res.json(JSON.stringify({ status: 1 }));
 	} catch (error) {
 		res.status(500).send('Ошибка при чтении файла XLSX');
@@ -143,19 +144,15 @@ function selectWinners(clientId, users, typeGift, count) {
 }
 
 app.get('/get-count-winners/', async (req, res) => {
-	console.log(' /get-count-winners start users', users?.length)
-
 	try {
 		if (!users || !users?.length) {
 			await getInit();
 		}
 
-
 		const count = req.query.count;
 		const typeGift = req.query.typeGift;
 		const clientId = req.query.clientId;
 		const winners = selectWinners(clientId, users, typeGift, count);
-		console.log(' /get-count-winners end users', users?.length)
 
 		return res.json(winners);
 	} catch (error) {
@@ -164,9 +161,11 @@ app.get('/get-count-winners/', async (req, res) => {
 });
 
 app.get('/save/', (req, res) => {
-	console.log(' /save start users', users?.length)
-
 	const clientId = req.query.clientId;
+
+	if (!clientId) {
+		return res.send('Не передан Id');
+	}
 	const filePath = `./result/result-${String(clientId)}.json`;
 
 	// Создание папки result, если она не существует
@@ -174,27 +173,30 @@ app.get('/save/', (req, res) => {
 		fs.mkdirSync('./result');
 	}
 
-	res.json(result[clientId])
-
 	fs.writeFile(filePath, JSON.stringify(result, null, 2), 'utf8', (err) => {
 		if (err) {
-			console.error(err);
-			return res.status(400).send('Не удалось сохранить файл');
+			console.log('Не удалось сохранить файл')
+			// return res.send('Не удалось сохранить файл');
 		} else {
-			saveIndexes.push(String(clientId))
-			return res.send('Файл успешно сохранен');
+			saveIndexes.push(String(clientId));
+			console.log('Файл успешно сохранен')
+			// return res.send('Файл успешно сохранен');
 		}
 	});
+
+	return res.json(result[clientId]);
 });
 
 app.get('/get-all-winners/', (req, res) => {
-	const clientId = req.query.clientId;
-	console.log('clientId', clientId)
+	const clientId = req.query?.clientId;
+	if (!clientId) {
+		return res.send('Не передан Id');
+	}
 	const filePath = `./result/result-${String(clientId)}.json`;
 
 	return fs.readFile(filePath, 'utf8', (err, data) => {
 		if (err) {
-			return res.status(404).send('Файл не найден');
+			return res.send('Файл не найден');
 		}
 		return res.json(JSON.parse(data));
 	});
@@ -204,4 +206,3 @@ app.listen(port, () => {
 	console.log(`Сервер запущен на http://localhost:${port}`);
 });
 
-//`${URL_API}/get-count-winners/?count=5&typeGift=${typeGift}&clientId=${clientId}`

@@ -37,12 +37,12 @@
 }
 
 .ButtonStart {
-	background-image: url("../../assets/lotereya_button.svg");
-	background-size: cover;
+	background-image: url("../../assets/lotereya_button-cropped.svg");
+	background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
-    width: 30vw;
-    height: 10vh;
+    width: 100%;
+    height: 115px;
     position: absolute;
     bottom: 5vh;
     background-color: transparent;

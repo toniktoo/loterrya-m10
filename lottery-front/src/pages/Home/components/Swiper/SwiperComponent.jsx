@@ -12,6 +12,8 @@ import Confetti from 'react-confetti'
 
 import { useAlert } from 'react-alert'
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 import LightSpeed from 'react-reveal/LightSpeed';
 
 import './styles.css';
@@ -25,6 +27,7 @@ import { ConfigImageCurrentGift, TYPE_GIFT_7, URL_API } from '../../HomePage';
 import axios from 'axios';
 import { Loader } from '../../../../components';
 import { ClientId } from '../../../../App';
+import { formatPhoneNumber } from '../../../../utils';
 
 function sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
@@ -59,7 +62,6 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 			axios.get(`${URL_API}/get-count-winners/?count=${numberWinner + 1}&typeGift=${typeGift}&clientId=${clientId}`)
 				.then((res) => {
 					setIsLoadingInitUsers(false)
-					console.log('start 1')
 					setListWinners(res?.data)
 					setIsPlayFirst(true);
 					swiperRef.current.swiper.autoplay.start();
@@ -132,20 +134,24 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 					} : false}
 				>
 					{
-						Array.from({ length: 20 }, (_, index) => (
-							<SwiperSlide key={countWinner + index + typeGift}>
-								<div className='ContentSlide'>
-									<img src={PathImagePhone} height={600} />
-									<img src={PathImageM10Logo} height={300} className='M10Logo' />
-									<div className={`info-panel ${showPanel ? 'visible' : ''}`}>
-										+{listWinners['0']}
+						Array.from({ length: 20 }, (_, index) => {
+							return (
+								<SwiperSlide key={countWinner + index + typeGift}>
+									<div className='ContentSlide'>
+										<img src={PathImagePhone} height={600} loading="lazy" />
+										<img src={PathImageM10Logo} height={300} className='M10Logo' loading="lazy" />
+										<div className={`info-panel ${showPanel ? 'visible' : ''}`}>
+											{listWinners['0'] && formatPhoneNumber(listWinners['0'])}
+										</div>
 									</div>
-								</div>
-							</SwiperSlide>
-						))
+								</SwiperSlide>
+							)
+						})
 					}
 				</Swiper>
-				<button className="Button ButtonPlay" onClick={startAutoplay} disabled={(play || showPanel)} />
+				<div className="ButtonContainer">
+					<button className="Button ButtonPlay" onClick={startAutoplay} disabled={(play || showPanel)} />
+				</div>
 				{
 					playConfetti && (
 						<Confetti
@@ -157,11 +163,9 @@ export function SwiperComponent({ countWinner, setCountWinner, loopAutoplay, typ
 				}
 			</div>
 			{!loopAutoplay ? (
-				<LightSpeed right duration={2000}>
-					<img src={ConfigImageCurrentGift[typeGift]} width="800" height="800" className="ImageCurrentGift" />
-				</LightSpeed>
+				<img src={ConfigImageCurrentGift[typeGift]} width="800" height="800" className="ImageCurrentGift" loading="lazy" />
 			) : (
-				<img src={ConfigImageCurrentGift[typeGift]} width="800" height="800" className="ImageCurrentGift" />
+				<img src={ConfigImageCurrentGift[typeGift]} width="800" height="800" className="ImageCurrentGift" loading="lazy" />
 			)}
 		</>
 	);

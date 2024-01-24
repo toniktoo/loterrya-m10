@@ -27,7 +27,7 @@ import { URL_API } from '../../..';
 import axios from 'axios';
 import { ClientId } from '../../../../App';
 
-export function SwiperComponentLast({  }) {
+export const SwiperComponentLast = ({ setStatusPage }) =>{
 	const navigate = useNavigate();
 	const alert = useAlert();
 
@@ -39,14 +39,13 @@ export function SwiperComponentLast({  }) {
 
 	const handleButtonClickResult = () => {
 		const id = window.localStorage.getItem(ClientId)
-
+		
 		axios.get(`${URL_API}/save/?&clientId=${id}`)
 			.then((res) => {
-				console.log('res save winners', res)
+				setStatusPage('result');
 				// localStorage.removeItem(ClientId)
-				navigate(RoutesConfig.RESULT)
 			});
-		
+
 	}
 
 	return (
@@ -77,17 +76,15 @@ export function SwiperComponentLast({  }) {
 						Array.from({ length: 20 }, (_, index) => (
 							<SwiperSlide key={index}>
 								<div className='ContentSlide'>
-									<img src={PathImagePhone} height={600} />
-									<img src={PathImageM10Logo} height={300} className='M10Logo' />
+									<img src={PathImagePhone} height={600} loading="lazy" />
+									<img src={PathImageM10Logo} height={300} className='M10Logo' loading="lazy" />
 								</div>
 							</SwiperSlide>
 						))
 					}
 				</Swiper>
 
-				<LightSpeed duration={2000}>
-					<button className="Button ButtonResult" onClick={handleButtonClickResult} />
-				</LightSpeed>
+				<button className="Button ButtonResult" onClick={handleButtonClickResult} />
 			</div>
 		</>
 	);
