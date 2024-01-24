@@ -56,7 +56,7 @@ export const ResultPage = () => {
 								<h2>{ConfigImageCurrentGift[TYPE_GIFT_1].name}</h2>
 								<div className={styles.Item}>
 									{winners[TYPE_GIFT_1]?.map(((item, index) => (<div className={styles.Row} key={index}>
-										<div className={styles.Section}>{index + 1}</div>
+										<div className={styles.Section} style={{ justifyContent: 'center'}}>{index + 1}</div>
 										<div className={styles.Section} style={{ minWidth: '8vw' }}>{formatPhoneNumber(item?.phone)}</div>
 									</div>)))}
 								</div>
@@ -70,7 +70,7 @@ export const ResultPage = () => {
 								<h2>{ConfigImageCurrentGift[TYPE_GIFT_2].name}</h2>
 								<div className={styles.Item}>
 									{winners[TYPE_GIFT_2]?.map(((item, index) => (<div className={styles.Row} key={index}>
-										<div className={styles.Section}>{index + 1}</div>
+										<div className={styles.Section} style={{ justifyContent: 'center'}}>{index + 1}</div>
 										<div className={styles.Section} style={{ minWidth: '8vw' }}>{formatPhoneNumber(item?.phone)}</div>
 									</div>)))}
 								</div>
@@ -84,7 +84,7 @@ export const ResultPage = () => {
 								<h2>{ConfigImageCurrentGift[TYPE_GIFT_3].name}</h2>
 								<div className={styles.Item}>
 									{winners[TYPE_GIFT_3]?.map(((item, index) => (<div className={styles.Row} key={index}>
-										<div className={styles.Section}>{index + 1}</div>
+										<div className={styles.Section} style={{ justifyContent: 'center'}}>{index + 1}</div>
 										<div className={styles.Section} style={{ minWidth: '8vw' }}>{formatPhoneNumber(item?.phone)}</div>
 									</div>)))}
 								</div>
@@ -98,7 +98,7 @@ export const ResultPage = () => {
 								<h2>{ConfigImageCurrentGift[TYPE_GIFT_4].name}</h2>
 								<div className={styles.Item}>
 									{winners[TYPE_GIFT_4]?.map(((item, index) => (<div className={styles.Row} key={index}>
-										<div className={styles.Section}>{index + 1}</div>
+										<div className={styles.Section} style={{ justifyContent: 'center'}}>{index + 1}</div>
 										<div className={styles.Section} style={{ minWidth: '8vw' }}>{formatPhoneNumber(item?.phone)}</div>
 									</div>)))}
 								</div>
@@ -112,7 +112,7 @@ export const ResultPage = () => {
 								<h2>{ConfigImageCurrentGift[TYPE_GIFT_5].name}</h2>
 								<div className={styles.Item}>
 									{winners[TYPE_GIFT_5]?.map(((item, index) => (<div className={styles.Row} key={index}>
-										<div className={styles.Section}>{index + 1}</div>
+										<div className={styles.Section} style={{ justifyContent: 'center'}}>{index + 1}</div>
 										<div className={styles.Section} style={{ minWidth: '8vw' }}>{formatPhoneNumber(item?.phone)}</div>
 									</div>)))}
 								</div>
@@ -126,7 +126,7 @@ export const ResultPage = () => {
 								<h2>{ConfigImageCurrentGift[TYPE_GIFT_6].name}</h2>
 								<div className={styles.Item}>
 									{winners[TYPE_GIFT_6]?.map(((item, index) => (<div className={styles.Row} key={index}>
-										<div className={styles.Section}>{index + 1}</div>
+										<div className={styles.Section} style={{ justifyContent: 'center'}}>{index + 1}</div>
 										<div className={styles.Section} style={{ minWidth: '8vw' }}>{formatPhoneNumber(item?.phone)}</div>
 									</div>)))}
 								</div>
@@ -140,7 +140,7 @@ export const ResultPage = () => {
 								<h2>{ConfigImageCurrentGift[TYPE_GIFT_7].name}</h2>
 								<div className={styles.Item}>
 									{winners[TYPE_GIFT_7]?.map(((item, index) => (<div className={styles.Row} key={index}>
-										<div className={styles.Section}>{index + 1}</div>
+										<div className={styles.Section} style={{ justifyContent: 'center'}}>{index + 1}</div>
 										<div className={styles.Section} style={{ minWidth: '8vw' }}>{formatPhoneNumber(item?.phone)}</div>
 									</div>)))}
 								</div>
