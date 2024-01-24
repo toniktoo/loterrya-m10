@@ -12,8 +12,6 @@ import Confetti from 'react-confetti'
 
 import { useAlert } from 'react-alert'
 
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-
 import LightSpeed from 'react-reveal/LightSpeed';
 
 import './styles.css';

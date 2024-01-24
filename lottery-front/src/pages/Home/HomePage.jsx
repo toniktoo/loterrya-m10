@@ -97,7 +97,7 @@ export const HomePage = ({ listWinners, setListWinners }) => {
 					statusPage === 'play' && (
 						<>
 							<div className={styles.ContainerSwiper}>
-								{/** -------------------- step start -------------------- */}
+								{/** -------------------- step start money 100 -------------------- */}
 								{
 									countWinner === 0 && (
 										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_1} phone={listWinners[TYPE_GIFT_1]} numberWinner={0} listWinners={listWinners} setListWinners={setListWinners} />
@@ -128,7 +128,7 @@ export const HomePage = ({ listWinners, setListWinners }) => {
 									)
 								}
 
-								{/** -------------------- step start -------------------- */}
+								{/** -------------------- step start money 500 -------------------- */}
 								{
 									countWinner === 5 && (
 										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2]} numberWinner={0} listWinners={listWinners} setListWinners={setListWinners} />
