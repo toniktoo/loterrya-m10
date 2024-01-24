@@ -711,30 +711,30 @@ export const HomePage = ({ listWinners, setListWinners }) => {
 								}
 								{
 									countWinner === 105 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2]} numberWinner={0} listWinners={listWinners} setListWinners={setListWinners} />
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2]} numberWinner={5} listWinners={listWinners} setListWinners={setListWinners} />
 									)
 								}
 								{
 									countWinner === 106 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2]} numberWinner={1} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2]} numberWinner={6} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
 								{
 									countWinner === 107 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2]} numberWinner={2} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2]} numberWinner={7} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
 								{
 									countWinner === 108 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2]} numberWinner={3} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2]} numberWinner={8} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
 								{
 									countWinner === 109 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2]} numberWinner={4} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_2} phone={listWinners[TYPE_GIFT_2]} numberWinner={9} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
@@ -771,30 +771,30 @@ export const HomePage = ({ listWinners, setListWinners }) => {
 								}
 								{
 									countWinner === 115 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3]} numberWinner={0} listWinners={listWinners} setListWinners={setListWinners} />
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3]} numberWinner={5} listWinners={listWinners} setListWinners={setListWinners} />
 									)
 								}
 								{
 									countWinner === 116 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3]} numberWinner={1} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3]} numberWinner={6} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
 								{
 									countWinner === 117 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3]} numberWinner={2} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3]} numberWinner={7} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
 								{
 									countWinner === 118 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3]} numberWinner={3} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3]} numberWinner={8} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
 								{
 									countWinner === 119 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3]} numberWinner={4} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_3} phone={listWinners[TYPE_GIFT_3]} numberWinner={9} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
@@ -831,30 +831,30 @@ export const HomePage = ({ listWinners, setListWinners }) => {
 								}
 								{
 									countWinner === 125 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4]} numberWinner={0} listWinners={listWinners} setListWinners={setListWinners} />
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4]} numberWinner={5} listWinners={listWinners} setListWinners={setListWinners} />
 									)
 								}
 								{
 									countWinner === 126 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4]} numberWinner={1} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4]} numberWinner={6} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
 								{
 									countWinner === 127 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4]} numberWinner={2} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4]} numberWinner={7} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
 								{
 									countWinner === 128 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4]} numberWinner={3} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4]} numberWinner={8} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
 								{
 									countWinner === 129 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4]} numberWinner={4} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_4} phone={listWinners[TYPE_GIFT_4]} numberWinner={9} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
@@ -891,30 +891,30 @@ export const HomePage = ({ listWinners, setListWinners }) => {
 								}
 								{
 									countWinner === 135 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_5} phone={listWinners[TYPE_GIFT_5]} numberWinner={0} listWinners={listWinners} setListWinners={setListWinners} />
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_5} phone={listWinners[TYPE_GIFT_5]} numberWinner={5} listWinners={listWinners} setListWinners={setListWinners} />
 									)
 								}
 								{
 									countWinner === 136 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_5} phone={listWinners[TYPE_GIFT_5]} numberWinner={1} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_5} phone={listWinners[TYPE_GIFT_5]} numberWinner={6} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
 								{
 									countWinner === 137 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_5} phone={listWinners[TYPE_GIFT_5]} numberWinner={2} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_5} phone={listWinners[TYPE_GIFT_5]} numberWinner={7} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
 								{
 									countWinner === 138 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_5} phone={listWinners[TYPE_GIFT_5]} numberWinner={3} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_5} phone={listWinners[TYPE_GIFT_5]} numberWinner={8} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
 								{
 									countWinner === 139 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_5} phone={listWinners[TYPE_GIFT_5]} numberWinner={4} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_5} phone={listWinners[TYPE_GIFT_5]} numberWinner={9} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
@@ -951,30 +951,30 @@ export const HomePage = ({ listWinners, setListWinners }) => {
 								}
 								{
 									countWinner === 145 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_6} phone={listWinners[TYPE_GIFT_6]} numberWinner={0} listWinners={listWinners} setListWinners={setListWinners} />
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={false} typeGift={TYPE_GIFT_6} phone={listWinners[TYPE_GIFT_6]} numberWinner={5} listWinners={listWinners} setListWinners={setListWinners} />
 									)
 								}
 								{
 									countWinner === 146 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_6} phone={listWinners[TYPE_GIFT_6]} numberWinner={1} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_6} phone={listWinners[TYPE_GIFT_6]} numberWinner={6} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
 								{
 									countWinner === 147 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_6} phone={listWinners[TYPE_GIFT_6]} numberWinner={2} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_6} phone={listWinners[TYPE_GIFT_6]} numberWinner={7} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
 								{
 									countWinner === 148 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_6} phone={listWinners[TYPE_GIFT_6]} numberWinner={3} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_6} phone={listWinners[TYPE_GIFT_6]} numberWinner={8} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
 								{
 									countWinner === 149 && (
-										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_6} phone={listWinners[TYPE_GIFT_6]} numberWinner={4} listWinners={listWinners} setListWinners={setListWinners}
+										<SwiperComponent clientId={clientId} key={countWinner} countWinner={countWinner} setCountWinner={setCountWinner} loopAutoplay={true} typeGift={TYPE_GIFT_6} phone={listWinners[TYPE_GIFT_6]} numberWinner={9} listWinners={listWinners} setListWinners={setListWinners}
 										/>
 									)
 								}
