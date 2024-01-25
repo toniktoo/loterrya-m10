@@ -1,0 +1,234 @@
+{
+  "0.1955731640278504": {
+    "money_100": [
+      {
+        "phone": 994503184488,
+        "operation_id": "92cc11ca-8fe5-4fad-8f5d-2ae6429f9707"
+      },
+      {
+        "phone": 994506682477,
+        "operation_id": "9b5b6ebd-cad4-4768-9743-7d045a8e4c7f"
+      },
+      {
+        "phone": 994556209330,
+        "operation_id": "9b1c1e8a-58cc-430f-938c-1e430e5cef29"
+      },
+      {
+        "phone": 994703680931,
+        "operation_id": "a2c1364d-1258-461f-b510-c77e5690993c"
+      },
+      {
+        "phone": 994559538471,
+        "operation_id": "859020b8-c272-46fa-894b-17706a22101b"
+      }
+    ]
+  },
+  "0.8590709411378366": {
+    "money_100": [
+      {
+        "phone": 994507818662,
+        "operation_id": "3673bef8-3f43-4a1c-93c4-f125f76f2b3d"
+      },
+      {
+        "phone": 994603094363,
+        "operation_id": "cffc867f-a931-41bf-804c-3d530ca0ebea"
+      },
+      {
+        "phone": 994552918736,
+        "operation_id": "b4ca3e1d-cd50-41f5-ac39-27cf5d659f73"
+      },
+      {
+        "phone": 994705160000,
+        "operation_id": "64cc2e81-85e0-4bc3-95e8-55c13b4bd4ff"
+      },
+      {
+        "phone": 994708453345,
+        "operation_id": "69404a91-cdd3-4a0f-9358-6e1e6b9a21f2"
+      }
+    ],
+    "money_500": [
+      {
+        "phone": 994706272725,
+        "operation_id": "ff474930-5d24-442b-9077-cafe605986a5"
+      },
+      {
+        "phone": 994773471350,
+        "operation_id": "34ff5ed2-4fae-4bdd-9a9b-872464656956"
+      },
+      {
+        "phone": 994554864242,
+        "operation_id": "c83be6ed-1e31-43cc-8495-5d2c1dac421e"
+      },
+      {
+        "phone": 994708778600,
+        "operation_id": "510dd839-c58c-4fb6-a5d7-b43fd7a1d180"
+      },
+      {
+        "phone": 994504342438,
+        "operation_id": "8c75e555-48e5-4a4e-aef6-5ca57eeddd6c"
+      }
+    ],
+    "samsung": [
+      {
+        "phone": 994503629292,
+        "operation_id": "af911270-38d6-40fe-a2c3-ad8947c10ddb"
+      },
+      {
+        "phone": 994773304534,
+        "operation_id": "0bb0db2c-5b63-4e21-bc12-599419ad879c"
+      },
+      {
+        "phone": 994775306480,
+        "operation_id": "12571bdb-c000-44fe-9b68-f0269f98886a"
+      },
+      {
+        "phone": 994515145827,
+        "operation_id": "f1e823b8-2b8d-4da0-930a-7464bd95f38d"
+      },
+      {
+        "phone": 994993570005,
+        "operation_id": "355e1660-a163-4cf7-8f8a-7e6741ac45cf"
+      }
+    ]
+  },
+  "0.9362053311684262": {
+    "money_100": [
+      {
+        "phone": 994517788889,
+        "operation_id": "3f56f450-e7a3-4be8-924f-36a4c079bf03"
+      },
+      {
+        "phone": 994556125427,
+        "operation_id": "b4fbd7ff-5dc8-4881-8eeb-a5bceadf33c9"
+      },
+      {
+        "phone": 994105318283,
+        "operation_id": "e69a0602-3974-4b94-94b3-260f95577ab7"
+      },
+      {
+        "phone": 994517465538,
+        "operation_id": "17b15ca3-699c-42b3-98c1-5e998b7f3afa"
+      },
+      {
+        "phone": 994507766054,
+        "operation_id": "050b661b-759f-4577-a69b-de863f614899"
+      }
+    ],
+    "money_500": [
+      {
+        "phone": 994702025042,
+        "operation_id": "e397df1a-66f3-47fb-82bf-7044bac657a0"
+      },
+      {
+        "phone": 994773818183,
+        "operation_id": "97e048f2-ef98-4b0d-b8cf-885879f1052f"
+      },
+      {
+        "phone": 994503203161,
+        "operation_id": "2e7fcdc8-2389-4133-9e93-a83d6b949b60"
+      },
+      {
+        "phone": 994557593603,
+        "operation_id": "4db134d7-b481-402f-a507-0102e0b643e9"
+      },
+      {
+        "phone": 994515094405,
+        "operation_id": "965c00e1-1397-4510-8631-667ec5f51aef"
+      }
+    ],
+    "samsung": [
+      {
+        "phone": 994507757397,
+        "operation_id": "938d3596-d979-46d0-94c9-a63e0192ad69"
+      },
+      {
+        "phone": 994554171819,
+        "operation_id": "336c8a9c-20a1-40e1-aa0d-4841ac6773cc"
+      },
+      {
+        "phone": 994502902564,
+        "operation_id": "5d52543e-e118-4d17-8b35-5c4433ccf5f3"
+      },
+      {
+        "phone": 994997916939,
+        "operation_id": "cdd33026-2a98-4084-ac6f-348afd7199ed"
+      },
+      {
+        "phone": 994505415547,
+        "operation_id": "88273a25-e9fb-4618-a842-47dffbbe98e4"
+      }
+    ],
+    "airpods": [
+      {
+        "phone": 994518544253,
+        "operation_id": "718f943e-1b6b-4897-b653-ed7fd11b914a"
+      },
+      {
+        "phone": 994556057466,
+        "operation_id": "d2cec65a-d2eb-4cca-8536-182ffed2b376"
+      },
+      {
+        "phone": 994513352025,
+        "operation_id": "9ee2498f-c5ab-4b8b-a13c-a70337cdf929"
+      },
+      {
+        "phone": 994709983114,
+        "operation_id": "4e63c6ec-0d95-4fea-85ff-e974fa8b2ce6"
+      },
+      {
+        "phone": 994553532199,
+        "operation_id": "b7ca19ad-1e3a-4547-83f1-0dc7761f1962"
+      }
+    ],
+    "watch": [
+      {
+        "phone": 994555390399,
+        "operation_id": "ceff5c18-fa2f-4d0c-8a2d-f965117ac3d5"
+      },
+      {
+        "phone": 994506635250,
+        "operation_id": "c8faa2a7-1c60-436c-8c5d-ad6167c912cc"
+      },
+      {
+        "phone": 994555106136,
+        "operation_id": "d8cf5be5-d92b-4770-ade2-f72e262dce21"
+      },
+      {
+        "phone": 994508709676,
+        "operation_id": "485a66a5-c240-4ab2-ad47-a76fca0a121f"
+      },
+      {
+        "phone": 994703801368,
+        "operation_id": "0711bb17-6586-449a-89fe-f02d13a0d689"
+      }
+    ],
+    "iphone": [
+      {
+        "phone": 994557343575,
+        "operation_id": "d4aedbb8-c604-47a0-b779-a3579e47ea4a"
+      },
+      {
+        "phone": 994513775019,
+        "operation_id": "689b9df7-f155-44b6-b03c-9d0b2d6f9b4d"
+      },
+      {
+        "phone": 994555700965,
+        "operation_id": "fa61a683-d81f-4d02-afc9-a7a168d09b89"
+      },
+      {
+        "phone": 994506305682,
+        "operation_id": "40170eb1-ea19-4fc5-963f-6db1abb9bc80"
+      },
+      {
+        "phone": 994552860719,
+        "operation_id": "7a0a1fd6-081e-4193-96f6-dbbe91d56388"
+      }
+    ],
+    "car": [
+      {
+        "phone": 994552771100,
+        "operation_id": "cb1ec219-0205-4955-affe-c2af0fd945de"
+      }
+    ]
+  }
+}

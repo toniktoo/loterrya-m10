@@ -1,0 +1,214 @@
+{
+  "0.9355746612911795": {
+    "money_100": [
+      {
+        "phone": 994507618073,
+        "operation_id": "9aa371e9-2586-4d1d-a890-aeaca63a4ea3"
+      },
+      {
+        "phone": 994514107721,
+        "operation_id": "8c58cbb8-6600-4612-96ee-18623df5e4d5"
+      },
+      {
+        "phone": 994703828080,
+        "operation_id": "a41f8b87-89dd-42a4-85d2-4dc212acf760"
+      },
+      {
+        "phone": 994702001118,
+        "operation_id": "964df398-e71a-4045-a8c2-446fa46b5cad"
+      },
+      {
+        "phone": 994506801464,
+        "operation_id": "f700a216-aebe-4294-a34d-b84e89cded05"
+      }
+    ]
+  },
+  "0.8569467961248101": {
+    "money_100": [
+      {
+        "phone": 994555684969,
+        "operation_id": "f4021c20-7bb6-4978-997b-2658f60912b5"
+      },
+      {
+        "phone": 994504641959,
+        "operation_id": "0054766d-2cc4-4484-9456-d7d621e5a3d7"
+      },
+      {
+        "phone": 994705981282,
+        "operation_id": "4a0dd9e3-a1c5-4a9d-8ee4-6f0f8342ccac"
+      },
+      {
+        "phone": 994505277946,
+        "operation_id": "a4f9bbbf-47c3-4176-b9bd-6e2c7a015a4b"
+      },
+      {
+        "phone": 994557445731,
+        "operation_id": "a99d309a-f2fa-4045-a86d-9caf7f45dd01"
+      }
+    ]
+  },
+  "0.5746902590442184": {
+    "money_100": [
+      {
+        "phone": 994505000414,
+        "operation_id": "5c0ece78-6fbd-4794-9ff7-ff09f54e3c37"
+      },
+      {
+        "phone": 994605335000,
+        "operation_id": "11013dbe-9d4f-4a16-b43f-1ea8bba98eb4"
+      },
+      {
+        "phone": 994703895958,
+        "operation_id": "ded779e1-fd69-4dbb-a4d0-9d413ee20fba"
+      },
+      {
+        "phone": 994559918155,
+        "operation_id": "9ac0d974-c0ee-444c-b478-a6ebcbb26d1c"
+      },
+      {
+        "phone": 994558819113,
+        "operation_id": "bde33e86-7b17-4836-a90c-7624f767743b"
+      }
+    ]
+  },
+  "0.8131783600827616": {
+    "money_100": [
+      {
+        "phone": 994517141761,
+        "operation_id": "c1919677-3f82-48a4-abe7-dea50e16d935"
+      },
+      {
+        "phone": 994557170779,
+        "operation_id": "e23c75ba-1263-428b-b66b-33d416cc2902"
+      },
+      {
+        "phone": 994553616816,
+        "operation_id": "61df1a32-a463-4683-8213-9369b8b449ab"
+      },
+      {
+        "phone": 994507362206,
+        "operation_id": "56ad7778-8538-4c5c-b7d4-9dfd2c084a40"
+      },
+      {
+        "phone": 994503707085,
+        "operation_id": "7f7b5f84-9921-47af-82f4-84c41246bab4"
+      }
+    ],
+    "money_500": [
+      {
+        "phone": 994504209419,
+        "operation_id": "aade77b6-4930-4ce9-bd2d-4105e3896901"
+      },
+      {
+        "phone": 994503896388,
+        "operation_id": "3e93f614-00c1-4024-821a-255c0f36c964"
+      },
+      {
+        "phone": 994552959313,
+        "operation_id": "1ba986bf-9ca8-4bf4-a400-d5820d9f2b01"
+      },
+      {
+        "phone": 994554228383,
+        "operation_id": "a869a663-0114-4ad6-8f4d-b38fb54aa293"
+      },
+      {
+        "phone": 994708620200,
+        "operation_id": "9b53fdba-82eb-42cc-ba52-55b2dafa9f86"
+      }
+    ],
+    "samsung": [
+      {
+        "phone": 994705582571,
+        "operation_id": "6f8ebef6-59c4-479b-b87f-c640d6690f52"
+      },
+      {
+        "phone": 994509789445,
+        "operation_id": "fafd1748-883f-49e2-87d7-dc5740461aa7"
+      },
+      {
+        "phone": 994709054484,
+        "operation_id": "f652bbae-2dd2-467e-a382-06df4b5986eb"
+      },
+      {
+        "phone": 994558001752,
+        "operation_id": "ad17d0b6-83a0-478c-9a47-2df53bbb25d8"
+      },
+      {
+        "phone": 994708078881,
+        "operation_id": "d548dd04-d5af-48b1-a82b-b84de65d8cff"
+      }
+    ],
+    "airpods": [
+      {
+        "phone": 994555878376,
+        "operation_id": "9c8b1035-c5f3-4ba0-bd59-37e0a79ea4ae"
+      },
+      {
+        "phone": 994559813071,
+        "operation_id": "cf6fbe7c-cb6c-49e9-b22a-399eff51e0aa"
+      },
+      {
+        "phone": 994709993305,
+        "operation_id": "d3d2f3bb-6bcc-409e-a02a-7abd637e2afb"
+      },
+      {
+        "phone": 994559778833,
+        "operation_id": "d7f229c8-c3a6-4f2e-91fa-7615ca6b7a7e"
+      },
+      {
+        "phone": 994508302679,
+        "operation_id": "88863062-501e-413c-93b2-f5d61aafd0df"
+      }
+    ],
+    "watch": [
+      {
+        "phone": 994516506815,
+        "operation_id": "cc0dc103-acbf-4155-82cf-e3be838f314e"
+      },
+      {
+        "phone": 994556010178,
+        "operation_id": "541ebeff-c50c-4ba8-9272-ffd03aee1e60"
+      },
+      {
+        "phone": 994552451413,
+        "operation_id": "8f263f8e-8478-4761-99fb-d076c98aaf62"
+      },
+      {
+        "phone": 994557839686,
+        "operation_id": "c9d46716-88d3-4edc-be66-f55eabad5c32"
+      },
+      {
+        "phone": 994555937414,
+        "operation_id": "f6e63022-1297-49ed-b803-da9ab0fa7048"
+      }
+    ],
+    "iphone": [
+      {
+        "phone": 994553446600,
+        "operation_id": "6dc7dcc3-02f5-4c2c-9180-8e9aac9d2c09"
+      },
+      {
+        "phone": 994997780616,
+        "operation_id": "0d775338-3780-478c-ac1d-f14be352c863"
+      },
+      {
+        "phone": 994554210975,
+        "operation_id": "1c1560ee-652e-463c-8970-16d5be791bb8"
+      },
+      {
+        "phone": 994515636304,
+        "operation_id": "73d97350-e5c9-4f04-a0ad-33a6c5fda689"
+      },
+      {
+        "phone": 994774795907,
+        "operation_id": "64c41b3e-bc3d-4197-8782-a42fb9934b7e"
+      }
+    ],
+    "car": [
+      {
+        "phone": 994702612717,
+        "operation_id": "e1b2b354-b694-4a6e-b40e-58719e9a39da"
+      }
+    ]
+  }
+}
